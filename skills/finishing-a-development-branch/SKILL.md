@@ -32,7 +32,7 @@ chọn merge khi còn đỏ.
 ## Bước 2 — Xác nhận nhánh & ticket
 
 - Đang trên nhánh feature `<type>/<PROJECT_KEY>-XXX-slug`, **không** phải `develop`/`main`.
-- Bóc Jira ticket từ tên nhánh. Không có ticket → hỏi user (commit footer cần `Refs: <PROJECT_KEY>-XXX`).
+- Bóc Jira ticket từ tên nhánh. Không có ticket → hỏi user (tiêu đề commit `type(scope): <PROJECT_KEY>-XXX …` và footer `Refs:` đều cần nó).
 - `git status` sạch hoặc đã stage đúng phạm vi (loại `.env*`, `.claude/settings.local.json`, secrets).
 - Chạm cross-cutting (enum/status/shared/schema) → chạy [[impact-sweep]] xác nhận không sót consumer.
 
@@ -51,7 +51,7 @@ Chỉ sau khi user chọn mới thực thi. User chưa chọn = không push, kh�
 ## Bước 4 — Thực thi lựa chọn
 
 - **A/B** → giao cho [[bow-commit]] (nó tự lo safety scan RLS/CORS/secrets, analyzer,
-  commit message chuẩn Conventional + `Refs:`, và — với A — push). Không tự viết lại pipeline
+  commit message chuẩn Conventional — type viết thường, mã ticket trong tiêu đề + `Refs:`, và — với A — push). Không tự viết lại pipeline
   đó ở đây; skill này chỉ là tầng quyết định phía trên.
 - **B** cụ thể: sau khi push nhánh (không phải merge), tạo MR trỏ vào `develop`, mô tả gọn
   WHAT/WHY + ticket. **Không** thêm trailer AI-authorship vào commit hay mô tả MR

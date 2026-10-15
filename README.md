@@ -15,6 +15,7 @@ bow-skill-process/
 ├── LICENSES/             # văn bản giấy phép của nguồn bên ngoài
 └── skills/
     ├── spec-driven-development/                # trước khi code
+    ├── bow-ticket-spec/
     ├── planning-and-task-breakdown/
     ├── bow-log-subtask/
     ├── jira-triage-bug-qc/
@@ -34,6 +35,7 @@ bow-skill-process/
 | Skill | Dùng khi | Nguồn |
 | --- | --- | --- |
 | `spec-driven-development` | bắt đầu tính năng / thay đổi lớn mà chưa có spec, yêu cầu còn mơ hồ | chuyển thể từ addyosmani/agent-skills (MIT) |
+| `bow-ticket-spec` | ticket / epic Jira nhiều AC, nhiều comment, dẫn sang Figma / tài liệu, hoặc đã bị reopen — đọc HẾT nguồn, ra bảng vế có nguồn dẫn + kịch bản Given/When/Then + câu hỏi mở kèm mặc định | team Bow, lấy ý tưởng từ SpecsGraph (Apache-2.0) |
 | `planning-and-task-breakdown` | đã có spec, cần chia thành các việc nhỏ làm được và kiểm được | chuyển thể từ addyosmani/agent-skills (MIT) |
 | `bow-log-subtask` | ticket lớn đáng tách — in danh sách subtask để người dùng tự đưa lên Jira | team Bow |
 | `jira-triage-bug-qc` | nhận MỘT ticket Jira: Task hay Bug, QC log đã đủ / đúng chưa | team Bow |
@@ -63,7 +65,7 @@ monorepo) và giữ nguyên bài học — chi tiết ở `THIRD_PARTY.md`. Vài
 - **Tham chiếu sang bộ khác.** Vài skill trỏ tới `[[bow-commit]]` (bộ `commit`), `[[flutter-realtime]]`
   / `[[bow-model]]` / `[[bow-i18n]]` (bộ `flutter`), `[[supabase-security-review]]` (bộ `supabase`).
   Dự án không dùng các bộ đó thì đây chỉ là tên, không làm hỏng gì.
-- **Jira chỉ đọc.** `bow-log-subtask` và `jira-triage-bug-qc` cố ý KHÔNG ghi lên Jira — chỉ đọc
+- **Jira chỉ đọc.** `bow-log-subtask`, `bow-ticket-spec` và `jira-triage-bug-qc` cố ý KHÔNG ghi lên Jira — chỉ đọc
   ticket rồi in kết quả ra chat để người dùng tự đưa lên.
 
 ## Tự nhận diện

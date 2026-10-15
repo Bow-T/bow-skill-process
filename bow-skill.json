@@ -2,8 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Bow-T/bow-agent/main/schema/bow-skill.schema.json",
   "id": "process",
   "label": "Quy trình làm việc",
-  "version": "1.0.0",
-  "description": "Bộ skill QUY TRÌNH dùng chung cho mọi công nghệ: lập spec / kế hoạch, TDD, gỡ lỗi tìm gốc rễ, bám tài liệu gốc, rà phạm vi ảnh hưởng, viết gọn, kiểm chứng trước khi báo xong, chốt nhánh, nhận review, tách subtask và triage ticket Jira. Phần lớn chuyển thể từ nguồn mở (xem THIRD_PARTY.md) + skill riêng của team Bow.",
+  "version": "1.1.0",
+  "description": "Bộ skill QUY TRÌNH dùng chung cho mọi công nghệ: lập spec / kế hoạch, dựng spec của một ticket từ mọi nguồn, TDD, gỡ lỗi tìm gốc rễ, bám tài liệu gốc, rà phạm vi ảnh hưởng, viết gọn, kiểm chứng trước khi báo xong, chốt nhánh, nhận review, tách subtask và triage ticket Jira. Phần lớn chuyển thể từ nguồn mở (xem THIRD_PARTY.md) + skill riêng của team Bow.",
   "maintainer": "bow-agent",
   "skillsDir": "skills",
   "targets": {
@@ -15,6 +15,7 @@
     "bow-lean",
     "bow-lean-review",
     "bow-log-subtask",
+    "bow-ticket-spec",
     "code-simplification",
     "debugging-and-error-recovery",
     "finishing-a-development-branch",
